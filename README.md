@@ -205,3 +205,64 @@ Nyní můžeme testy spouštět příkazem `npm test`.
 
 Budeme-li nyní chtít použít příkazy při spuštění, musíme je uvádět v tomto tvaru.
 `npm test -- --logLevel=debug` tento zápis npm říká, aby všechny argumenty uvedené za dvojíma pomlčkama přidal k příkazu, který skript vykonává. V našem případě tedy `wdio --logLevel=debug`
+
+# Assertions
+
+Assertions porovnávají dvě hodnoty, pokud jsou rozdílné, vytvoří error a test vyhodnotí negativně.
+
+* Zabudovaná Node.js assertion knihovna (https://nodejs.org/api/assert.html)
+Knihovnu vkládáme pomocí require statementu `var assert = require('assert');`
+
+Pozitivní průchod
+```
+let assert = require('assert')
+
+assert.strictEqual(1,1)
+```
+
+Negativní průchod
+```
+let assert = require('assert')
+
+assert.strictEqual(1,2)
+```
+
+NotEqual příklad:
+```
+let assert = require('assert')
+
+let expected = 1
+let actual = 1 + 1
+
+assert.notStrictEqual(expected, actual)
+```
+
+# Reporter
+
+Spusťme negativní průchod
+```
+let assert = require('assert')
+
+describe('Mall.cz homepage', () => {
+    it('should have the right title', () => {
+        browser.url('./')
+
+        const expected = 'MALL.CZ – bílé zboží, elektronika, PC, outdoor, hobby, hračky, kosmetika, chovatelské potřebi'
+        const actual = browser.getTitle()
+
+        assert.strictEqual(expected, actual)
+    })
+})
+```
+
+
+Defaultně podporovaný reporter je `dot`.
+```
+reporters: ['dot']
+```
+
+# Čáj
+
+https://www.chaijs.com/
+
+Chai je assertion knihovna, která stejně jako node.js assertion knihovna, umožňuje porovnávat expected a actual hodnoty. Její výhodou je však větší počet assertions. Také umožňuje 3 různé varianty assertů - `should`, `expect`, `assert`. Ty umožňují psát testy ve formátu, který je pro daný problém nejvhodnější.
