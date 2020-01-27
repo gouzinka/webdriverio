@@ -122,7 +122,7 @@ Testy jsou organizované za pomocí `describe` a `it` funkcí. `Describe` je pou
  
 # Příkazy
 
-Příkazy jsou jednoduchý způsob, jak upravit základní konfiguraci při spuštění.
+Příkazy jsou jednoduchý způsob, jak přetížit/přidat konfiguraci při spuštění.
 https://webdriver.io/docs/clioptions.html
 
 Chceme-li změnit baseUrl:
@@ -158,7 +158,10 @@ COMMAND getTitle()
 RESULT MALL.CZ – bílé zboží, elektronika, PC, outdoor, hobby, hračky, kosmetika, chovatelské potřeby
 ```
 
-# Vlastní proměnné
+# Vlastní argumenty
+
+Vytvořením dočasné proměnné prostředí (environemtal variable), můžeme modifikovat běh skriptu.
+Node nám umožňuje přístup k proměnným prostředí skrze `process.env` objekt. Ukážeme si jak na to.
 
 Upravíme config, hodnotu baseUrl, přesuneme do proměnné:
 ```
@@ -183,3 +186,22 @@ SERVER=test ./node_modules/.bin/wdio wdio.conf.js
 ```
 
 # NPM skripty
+https://docs.npmjs.com/misc/scripts
+
+NPM skripty slouží ke zjednodušení příkazů.
+Existují 2 typy:
+1. supported scripts - běžně používané příkazy pro npm moduly (spouštíme pomocí npm start, stop, test... - zkratka)
+2. custom scripts - skripty s vlastními názvy (spouštíme pomocí `npm run <nazev>`)
+
+Tyto skripty definujeme v souboru `package.json`:
+
+```
+// wdio wdio.conf.js - název souboru můžeme ommitovat, wdio jej bere defaultně
+"scripts": {
+  "test": "wdio"
+}
+```
+Nyní můžeme testy spouštět příkazem `npm test`.
+
+Budeme-li nyní chtít použít příkazy při spuštění, musíme je uvádět v tomto tvaru.
+`npm test -- --logLevel=debug` tento zápis npm říká, aby všechny argumenty uvedené za dvojíma pomlčkama přidal k příkazu, který skript vykonává. V našem případě tedy `wdio --logLevel=debug`
