@@ -239,6 +239,10 @@ assert.notStrictEqual(expected, actual)
 
 # Reporter
 
+Pokud jsme jej neinstalovali jako součást wdio/cli, nainstalujeme jej příkazem
+
+`npm install @wdio/dot-reporter --save-dev`
+
 Spusťme negativní průchod
 ```
 let assert = require('assert')
@@ -265,4 +269,31 @@ reporters: ['dot']
 
 https://www.chaijs.com/
 
-Chai je assertion knihovna, která stejně jako node.js assertion knihovna, umožňuje porovnávat expected a actual hodnoty. Její výhodou je však větší počet assertions. Také umožňuje 3 různé varianty assertů - `should`, `expect`, `assert`. Ty umožňují psát testy ve formátu, který je pro daný problém nejvhodnější.
+Chai je assertion knihovna, která stejně jako node.js assertion knihovna, umožňuje porovnávat expected a actual hodnoty. Její výhodou je však větší počet assertions (https://www.chaijs.com/api/assert/). Také umožňuje 3 různé varianty stylů assertů - `should`, `expect` a `assert`. Ty umožňují psát testy ve formátu, který je pro daný problém nejvhodnější.
+
+Nainstalujeme
+
+`npm install --save-dev chai`
+
+A jak se změní náš kód?
+```
+let assert = require('chai').assert
+
+describe('Mall.cz homepage', () => {
+    it('should have the right title', () => {
+        browser.url('./')
+
+        const expected = 'MALL.CZ – bílé zboží, elektronika, PC, outdoor, hobby, hračky, kosmetika, chovatelské potřebi'
+        const actual = browser.getTitle()
+
+        assert.strictEqual(expected, actual)
+    })
+})
+```
+
+Nakonec si chai přidáme do configu:
+```
+before: function (capabilities, specs) {
+    assert = require('chai').assert
+}
+```
