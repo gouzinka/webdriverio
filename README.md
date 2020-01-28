@@ -49,10 +49,10 @@ Dopadlo-li vše v pořádku, najdeš v projektu soubor
 wdio.conf.js
 ```
 
-Zde si můžeš všimnout Node.js exports globální proměnné. Tento objekt je připravený pro přidávání vlastností. WebdriverIO se dívá na vlastnost `config`.
+Zde si můžeš všimnout Node.js `exports` globální proměnné. Tento objekt je připravený pro přidávání vlastností. WebdriverIO se dívá na vlastnost `config`.
 V nastavení si všimneme:
  - specs - cesta k našim testům
- - capabilities.browser - prohlížeš pro spouštění testů [array - můžeme definovat vícero prohlížečů pro test]
+ - capabilities.browser - prohlížeč pro spouštění testů [array - můžeme definovat vícero prohlížečů pro test]
  - framework - název frameworku pro psaní testů
  - mochaOpts - behaviour driven development style (bdd)
  
@@ -88,7 +88,7 @@ Nakonec test spustíme
 
 Tento zápis si můžeme dovolit s config sync: true.
 
-Čeho si všimneme? Webdriverio testrunner nám zpřístupní browser proměnnou (webdriverio session nám zpřístupní client proměnnou).
+Čeho si všimneme? Webdriverio testrunner nám zpřístupní browser proměnnou.
 https://webdriver.io/docs/browserobject.html
 
 To se hodí, pokud chceme například identifikovat, že test běží na mobilním zařízení.
@@ -113,9 +113,9 @@ console.log(browser.isAndroid) // outputs: false
 Testy tak můžeme vytvářet pro konkrétní typ zařízení.
 
 # Poznejme Mocha
-Mocha je javascriptový test framework, který nabízí množství benefitů. Mezi ty patří lepší organizace, lepší error reporting, ale i funkcionalitu navíc, jakými jsou pre a post-test hooks.
+Mocha je javascriptový test framework, který nabízí množství benefitů. Mezi ty patří lepší organizace, lepší error reporting, ale i funkcionality navíc, jakými jsou pre a post-test hooks.
 
-Testy jsou organizované za pomocí `describe` a `it` funkcí. `Describe` je použité pro seskupení sady testů podle části (featury), jež testují. `It` definuje konkrétní test k běhu. Typicky je uvnitř `describe` vnořeno několik `it` funkcí. V některých případech, pro větší přehlednost v hiearchii testů, je uvnitř `describe` zanořeno několik dalších `describe` funkcí.
+Testy jsou organizované za pomoci `describe` a `it` funkcí. `Describe` je použité pro seskupení sady testů podle části (featury), jež testují. `It` definuje konkrétní test k běhu. Typicky je uvnitř `describe` vnořeno několik `it` funkcí. V některých případech, pro větší přehlednost v hiearchii testů, je uvnitř `describe` zanořeno několik dalších `describe` funkcí.
 
  * `describe` je funkce, jež přijímá 2 parametry - název feature a funkci, jež obsahuje kód, sloužící k otestování dané feature
  * `it` je funkce, jež přijímá 2 parametry - název specifického testu a funkci, jež obsahuje samotný test
@@ -160,7 +160,7 @@ RESULT MALL.CZ – bílé zboží, elektronika, PC, outdoor, hobby, hračky, kos
 
 # Vlastní argumenty
 
-Vytvořením dočasné proměnné prostředí (environemtal variable), můžeme modifikovat běh skriptu.
+Vytvořením dočasné proměnné prostředí (environmental variable), můžeme modifikovat běh skriptu.
 Node nám umožňuje přístup k proměnným prostředí skrze `process.env` objekt. Ukážeme si jak na to.
 
 Upravíme config, hodnotu baseUrl, přesuneme do proměnné:
@@ -190,7 +190,7 @@ https://docs.npmjs.com/misc/scripts
 
 NPM skripty slouží ke zjednodušení příkazů.
 Existují 2 typy:
-1. supported scripts - běžně používané příkazy pro npm moduly (spouštíme pomocí npm start, stop, test... - zkratka)
+1. supported scripts - běžně používané příkazy pro npm moduly (spouštíme pomocí `npm start | stop | test`... - zápis zkratkou bez `run`)
 2. custom scripts - skripty s vlastními názvy (spouštíme pomocí `npm run <nazev>`)
 
 Tyto skripty definujeme v souboru `package.json`:
