@@ -11,7 +11,7 @@ Oficiální stránky: https://webdriver.io/
 4. Mocha and Chai
 
 <details>
-  <summary><b>Seznámení s Webdriverio</b></summary>
+  <summary><b>Seznámení s Webdriverio - config, NPM, Mocha a první test</b></summary>
 
 - [Kapitola 1](/Kapitola-1.md)
 
@@ -20,6 +20,6 @@ Oficiální stránky: https://webdriver.io/
 <details>
   <summary><b>Assertions, Chai a debugování</b></summary>
 
-- [Kapitola 1](/Kapitola-2.md)
+- [Kapitola 2](/Kapitola-2.md)
 
 </details>
