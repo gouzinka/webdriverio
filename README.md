@@ -10,6 +10,13 @@ Oficiální stránky: https://webdriver.io/
 3. Npm
 4. Mocha and Chai
 
+<details>
+  <summary><b>Seznámení s Webdriverio</b></summary>
+
+- [Kapitola 1](/Kapitola 1)
+
+</details>
+
 # Instalace
 
 Nejprve je potřeba mít nainstalovaný Node.js a to ve správné verzi.
