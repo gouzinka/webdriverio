@@ -115,3 +115,35 @@ before: function (capabilities, specs) {
     assert = require('chai').assert
 }
 ```
+
+# Píšeme druhý test
+
+```
+const assert = require('assert')
+
+describe('Daily deal', () => {
+    it('should add correct item in the cart', () => {
+    	const dailyDealButton = $('.daily-deal-2__add-to-cart .btn--primary')
+        const productTitle = 'Trust Arys Compact RGB (23120)'
+        const widgetDrawerBtn = $('#navigation-widget > ul > li:nth-child(4) > div.drw--down.drw--right #proceed-to-cart')
+        const cartTitleElement = $('//*[@id="cart-overview"]/div[2]/div/div[2]/div[2]/article/div[1]/div[1]/div/h3/a')
+
+    	// Go to HP
+        browser.url('./')
+
+        dailyDealButton.waitForExist(5000)
+
+        // Add to cart from daily deal box
+        dailyDealButton.click()
+
+        widgetDrawerBtn.waitForClickable({ timeout: 5000 })
+
+        widgetDrawerBtn.click()
+
+        cartTitleElement.waitForExist(5000)
+
+        // Compare values via assert - actual vs. expected
+        assert.strictEqual(cartTitleElement.getText(), productTitle)
+    })
+})
+```
