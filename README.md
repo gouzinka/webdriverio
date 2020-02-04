@@ -4,18 +4,7 @@
 
 Oficiální stránky: https://webdriver.io/
 
-Jak šel čass...
+Jak šel čas...
 
-<details>
-  <summary><b>1. Seznámení s Webdriverio - config, NPM, Mocha a první test</b></summary>
-
-- [Kapitola 1](/Kapitola-1.md)
-
-</details>
-
-<details>
-  <summary><b>2. Assertions, Chai a debugování</b></summary>
-
-- [Kapitola 2](/Kapitola-2.md)
-
-</details>
+- [Kapitola 1 - Seznámení s Webdriverio - config, NPM, Mocha a první test](/Kapitola-1.md)
+- [Kapitola 2 - Assertions, Chai a debugování](/Kapitola-2.md)
