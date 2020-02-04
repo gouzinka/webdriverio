@@ -21,7 +21,11 @@ Společně s `let` a `const` ES6 přinesla také tzv. 'arrow functions'. Ty pře
 https://hacks.mozilla.org/2015/06/es6-in-depth-arrow-functions/
 https://www.freecodecamp.org/news/when-and-why-you-should-use-es6-arrow-functions-and-when-you-shouldnt-3d851d7f0b26/
 
-# Odbočka k NPM
+# Odbočka k Selektorům
+
+https://webdriver.io/docs/selectors.html
+
+Typicky budeme používat CSS, nebo xPath.
 
 
 # Assertions
