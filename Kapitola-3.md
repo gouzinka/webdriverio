@@ -39,7 +39,7 @@ Více najdete zde: https://martinfowler.com/bliki/PageObject.html
 
 ## Píšeme první Page object
 
-Z rootu našeho projektu si vytvoříme nový adresář pageobjects
+Z rootu našeho projektu si vytvoříme nový adresář `pageobjects`
 ```
 mkdir -p ./test/pageobjects
 ```
@@ -49,7 +49,7 @@ A zde si vytvoříme soubor
 touch ./test/pageobjects/page.js
 ```
 
-Tímto jsme si vytvořili hlavní Page object, ze kterého budou ostatní Page objects dědit. Umisťujeme sem generické selektory a metody.
+Tímto jsme si vytvořili hlavní Page object, ze kterého budou ostatní dědit. Umisťujeme sem generické selektory a metody.
 
 Doplníme obsah
 ```
