@@ -1,6 +1,6 @@
 # Píšeme druhý test (abychom jej následně celý rozcupovali)
 
-```
+```javascript
 const assert = require('assert')
 
 describe('Daily deal', () => {
@@ -52,7 +52,7 @@ touch ./test/pageobjects/page.js
 Tímto jsme si vytvořili hlavní Page object, ze kterého budou ostatní dědit. Umisťujeme sem generické selektory a metody.
 
 Doplníme obsah
-```
+```javascript
 // Vytvoříme třídu pro každou stránku/komponentu
 class Page {
     // Vytvoříme metodu open s parametrem path => url stránky bude součástí jejího page objektu, namísto konkrétního testu
