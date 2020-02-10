@@ -74,7 +74,95 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes
 ## Daily deal jako Page object
 
 Konkrétní komponenta `Daily deal`, kterou najdeme na HP bude mít také svůj vlastní Page object.
-Vytvoříme proto soubor
+
+Vytvoříme soubor
 ```
-touch ./test/pageobjects/page.js
+touch ./test/pageobjects/daily-deal.page.js
 ```
+
+A vytvoříme třídu `DailyDeal`
+```javascript
+class DailyDeal {
+    // gettery pro selektor
+    get addToCartBtn() {
+        return $('.daily-deal-2__add-to-cart .btn--primary')
+    }
+    
+    get addedToCartBtn() {
+        return $('.daily-deal-2__add-to-cart .btn--primary.action--done')
+    }
+    
+    // metoda pro přidání do košíku
+    addProductToCart() {
+        this.addToCartBtn.waitForDisplayed()
+        this.addToCartBtn.click()
+        this.addedToCartBtn.waitForDisplayed()
+    }
+}
+
+export default new DailyDeal()
+```
+
+A použijeme abstrakci v našem testu
+```javascript
+// nejprve importujeme Page object
+import DailyDeal from '../pageobjects/daily-deal.page'
+```
+
+```javascript
+// nejprve importujeme Page object
+import DailyDeal from '../pageobjects/daily-deal.page'
+```
+
+```javascript
+// následně využijeme metodu pro přidání do košíku
+DailyDeal.addProductToCart()
+```
+
+# Destructuring
+
+Destructuring assignment syntax umožňuje uložení vlastností objektu či hodnot pole do proměnných.
+
+Jak to vypadá bez této featury?
+```javascript
+let myArray = [1, 2, 3];
+
+let a = myArray[0];
+let b = myArray[1];
+let c = myArray[2];
+```
+
+A jak s ní?
+```javascript
+let myArray = [1, 2, 3];
+
+let [a, b, c] = myArray; // a=1, b=2, c=3
+```
+
+A s defaultními hodnotami?
+```javascript
+let myArray = [1];
+// not enough values in an array
+let [a, b, c] = myArray; // a=1, b=undefined, c=undefined
+```
+
+```javascript
+let myArray = [1];
+// use fallback values
+let [a=2, b=4, c=6] = myArray; // a=1, b=4, c=6
+```
+
+Přeskočení
+```javascript
+let myArray = [1, 2, 3];
+let [a, , b] = myArray; // a=1, b=3
+```
+
+Spread operator
+```javascript
+let myArray = [1, 2, 3, 4, 5, 6];
+let [a, b, ...others] = myArray; // a=1, b=2, others = [3, 4, 5, 6]
+```
+
+https://www.vojtechruzicka.com/destructuring-javascript/
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment
