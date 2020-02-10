@@ -44,7 +44,7 @@ Z rootu našeho projektu si vytvoříme nový adresář `pageobjects`
 mkdir -p ./test/pageobjects
 ```
 
-A zde si vytvoříme soubor
+A zde si vytvoříme soubor `page.js`
 ```
 touch ./test/pageobjects/page.js
 ```
