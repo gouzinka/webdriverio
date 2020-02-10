@@ -118,11 +118,6 @@ import DailyDeal from '../pageobjects/daily-deal.page'
 ```
 
 ```javascript
-// nejprve importujeme Page object
-import DailyDeal from '../pageobjects/daily-deal.page'
-```
-
-```javascript
 // následně využijeme metodu pro přidání do košíku
 DailyDeal.addProductToCart()
 ```
