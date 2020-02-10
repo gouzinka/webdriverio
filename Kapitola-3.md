@@ -73,7 +73,8 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes
 
 ## Import a Export
 
-Export slouží k exportu funkcí, objektů, tříd, či výrazů ze souborů nebo modulů. Nejčastěji se setkáme s formou `export default`, která nám dovoluje exportovat jednu třídu, funkci nebo 
+Export slouží k exportu funkcí, objektů, tříd, či výrazů ze souborů nebo modulů. Nejčastěji se setkáme s formou `export default`, která nám dovoluje exportovat jednu třídu, funkci nebo tzv. primitive values.
+Import, jak tušíte, se stará o imporotování těchto exportovaných částí.
 
 https://javascript.info/import-export
 
