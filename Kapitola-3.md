@@ -82,7 +82,11 @@ touch ./test/pageobjects/daily-deal.page.js
 
 A vytvoříme třídu `DailyDeal`
 ```javascript
-class DailyDeal {
+// dědíme z hlavní Page třídy
+import Page from '../pageobjects/page'
+
+// a extendujeme ji novou třídou DailyDeal
+class DailyDeal extends Page {
     // gettery pro selektor
     get addToCartBtn() {
         return $('.daily-deal-2__add-to-cart .btn--primary')
