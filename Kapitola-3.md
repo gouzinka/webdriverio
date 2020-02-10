@@ -73,6 +73,8 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes
 
 ## Import a Export
 
+Export slouží k exportu funkcí, objektů, tříd, či výrazů ze souborů nebo modulů. Nejčastěji se setkáme s formou `export default`, která nám dovoluje exportovat jednu třídu, funkci nebo 
+
 https://javascript.info/import-export
 
 ## Daily deal jako Page object
