@@ -71,6 +71,10 @@ Zajímají vás třídy v javascriptu? Čtěte více zde:
 https://javascript.info/class
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes
 
+## Import a Export
+
+https://javascript.info/import-export
+
 ## Daily deal jako Page object
 
 Konkrétní komponenta `Daily deal`, kterou najdeme na HP bude mít také svůj vlastní Page object.
