@@ -1,9 +1,3 @@
-# Práce s poli:
-https://sdras.github.io/array-explorer/
-
-# Práce s objekty:
-https://objectexplorer.netlify.com/
-
 # Práce s řetězci:
 
 ```
@@ -66,5 +60,50 @@ let string = 'Webdriverio'
 string = string.replace('Web','Chrome').replace('io','') // 'Chromedriverio' - pozor, je nutné přiřazení do proměnné (v konzoli funguje i bez)
 ```
 
+# Práce s poli:
+https://sdras.github.io/array-explorer/
 
+### Filter
+
+Vytvoří nové pole na základě splnění podmínky.
+
+```
+const studentsAge = [17, 16, 18, 19, 21, 17];
+studentsAge.filter( age => age > 18 );
+// [19, 21]
+```
+
+### Map
+
+Vytvoří nové pole, do něhož můžeme uložit prvky manipulované.
+
+```
+const numbers = [2, 3, 4, 5];
+numbers.map( number => `${number} point`);
+// ['2 point', '3 point', '4 point', '5 point']
+```
+
+### For-each
+
+Iterace nad polem.
+
+```
+const boxes = ['small', 'medium', 'big'];
+boxes.forEach( box => console.log(box) );
+// 'small'
+// 'medium'
+// 'big'
+```
+
+### Includes
+Vyhledá, zda pole obsahuje prvek.
+
+```
+const names = ['sophie', 'george', 'waldo', 'stephen', 'henry'];
+names.includes('waldo');
+// true
+```
+
+# Práce s objekty:
+https://objectexplorer.netlify.com/
 
