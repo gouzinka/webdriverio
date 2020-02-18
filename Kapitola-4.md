@@ -1,10 +1,10 @@
-#Práce s poli:
+# Práce s poli:
 https://sdras.github.io/array-explorer/
 
-#Práce s objekty:
+# Práce s objekty:
 https://objectexplorer.netlify.com/
 
-#Práce s řetězci:
+# Práce s řetězci:
 
 ```
 let string = 'This is string.'
@@ -15,14 +15,14 @@ Kompletní výčet najdeme zde: https://developer.mozilla.org/en-US/docs/Web/Jav
 
 Jaké jsou však užitečné?
 
-##Délka
+## Délka
 
 ```
 let string = 'Webdriverio'
 string.length // 11
 ```
 
-##Získání znaku
+## Získání znaku
 
 Pomocí notace hranatých závorek můžeme přistupovat k jednotlivým znakům řetězce.
 ```
@@ -31,7 +31,7 @@ string[0] // 'W' - první pozice
 string[string.length-1] // 'o' - poslední pozice (indexujeme od 0, proto odečítáme)
 ```
 
-##Vyhledání subřetězce
+## Vyhledání subřetězce
 
 ```
 let string = 'Webdriverio'
@@ -39,7 +39,7 @@ string.indexOf('driver') // 3 - substring začíná na pozici 3 (0, 1, 2, 3 - 4.
 string.indexOf('codeception') // -1 - substring nenalezen
 ```
 
-##Extrakce subřetězce
+## Extrakce subřetězce
 
 ```
 let string = 'Webdriverio'
@@ -51,7 +51,7 @@ let string = 'Webdriverio'
 string.slice(3) // 'driverio' - první parametr říká od jaké pozice extrahujeme (včetně), druhý říká pozici před kterou chceme extrahovat
 ```
 
-##Konvertování - upper, lower
+## Konvertování - upper, lower
 
 ```
 let string = 'Webdriverio'
@@ -59,7 +59,7 @@ string.toLowerCase() // 'webdriverio'
 string.toUpperCase() // 'WEBDRIVERIO'
 ```
 
-##Nahrazování
+## Nahrazování
 
 ```
 let string = 'Webdriverio'
