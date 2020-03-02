@@ -10,3 +10,4 @@ Jak šel čas...
 - [Kapitola 2 - Assertions, Chai a debugování](/Kapitola-2.md)
 - [Kapitola 3 - Page Object, třídy, import/export](/Kapitola-3.md)
 - [Kapitola 4 - Práce se stringy, poli a objekty](/Kapitola-4.md)
+- [Kapitola 5 - Datove typy](/Kapitola-5.md)
