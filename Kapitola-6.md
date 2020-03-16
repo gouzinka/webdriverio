@@ -18,13 +18,19 @@ for (let i = 0; i < orderNumbers.length, i++) {
 ```
 
 'For' loop používá `counter`, u kterého nejprve přiřadíme iniciální hodnotu, toto je tzv. řídící proměnná
-`let i = 0 //initial expression`
+```
+let i = 0 //initial expression
+```
 
 dále určíme podmínku pro vykonání kroku cyklu
-`i < orderNumbers.length //condition`
+```
+i < orderNumbers.length //condition
+```
 
 a na závěr příkaz, který modifikuje řídící proměnnou v každém kroku iterace
-`i++ //increment expression`
+```
+i++ //increment expression
+```
 
 ## Inkrementace & Dekrementace - operátory
 
