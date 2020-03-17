@@ -2,6 +2,8 @@
 
 ## 'For' loop
 
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for
+
 Nejzákladnější forma iterace, s pevným počtem opakování.
 
 ```
@@ -13,7 +15,7 @@ Konkrétně:
 const orderNumbers = ['1548526', '1548527', '1548531', '1548542']
 
 for (let i = 0; i < orderNumbers.length, i++) {
-  console.log(`Číslo objednávky je: ${orderNumbers[i]}`)
+  console.log(i + '. objednávka má číslo: ' + orderNumbers[i]) // lépe: console.log(`${i}. objednávka má číslo: ${orderNumbers[i]}`)
 }
 ```
 
@@ -32,7 +34,7 @@ a na závěr příkaz, který modifikuje řídící proměnnou v každém kroku 
 i++ //increment expression
 ```
 
-## Inkrementace & Dekrementace - operátory
+## Inkrementace & Dekrementace - operátory (odbočka)
 
 `i++` je zápis, který umožní přičíst proměnné 1 a navrátit její hodnotu.
 Stejně tak můžeme použít `i--` pro dekrementaci.
@@ -48,3 +50,21 @@ let b = 5
 
 ```
 
+## 'For...In' loop
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...in
+
+Pro iteraci skrze objekty (pozor, můžete použít i na polle, ale není to doporučované, viz dokumentace) můžeme použít cyklus 'For...In', který je zjednodušením klasického 'For' cyklu, neboť se obejdeme bez počítadla.
+
+```
+const orders = {
+  1548526: { item: 'Pračka' }, 
+  1548527: { item: 'Myčka' },
+  1548531: { item: 'Sušička' },
+  1548542: { item: 'Kávovar' }
+}
+
+for (let order in orders) {
+  console.log(orders[order])
+}
+```
